@@ -1,4 +1,4 @@
-import Angebote
+import offers
 import requests
 import time
 import datetime
