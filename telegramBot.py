@@ -78,20 +78,16 @@ def getLastUserInput():
             pass    
     return user_input
 
-#while True:
-#    today = datetime.date.today()
-#    dayNumber = datetime.date.weekday(today)
-#    now = datetime.datetime.now()
-#    hour = now.strftime('%H')
-#    if days[dayNumber] == 'Montag' and hour == '10':
-#        print('starting')
-#        for x in getChatID():
-#            chatID = x
-#            bot(chatID)        
-#    else:
-#        pass    
-#    time.sleep(3600)
-
-Angebote.searchCategory()
-articles = Angebote.getArticles()
-print(articles)
+while True:
+    today = datetime.date.today()
+    dayNumber = datetime.date.weekday(today)
+    now = datetime.datetime.now()
+    hour = now.strftime('%H')
+    if days[dayNumber] == 'Montag' and hour == '10':
+        print('starting')
+        for x in getChatID():
+            chatID = x
+            bot(chatID)        
+    else:
+        pass    
+    time.sleep(3600)
