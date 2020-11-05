@@ -1,4 +1,4 @@
-import Angebote
+import offers
 import requests
 import time
 import datetime
@@ -6,7 +6,7 @@ import datetime
 #DurstExpressBot
 #username telegram: DurstExpress_bot 
 
-token = '1308432447:AAEIe1mrS-8kYO2dWizretTjkELjLBPT03w'
+token = #insert your token here
 api = 'https://api.telegram.org/bot'+ token + '/getUpdates'
 sendURL = 'https://api.telegram.org/bot'+ token + '/sendMessage'
 
@@ -78,20 +78,16 @@ def getLastUserInput():
             pass    
     return user_input
 
-#while True:
-#    today = datetime.date.today()
-#    dayNumber = datetime.date.weekday(today)
-#    now = datetime.datetime.now()
-#    hour = now.strftime('%H')
-#    if days[dayNumber] == 'Montag' and hour == '10':
-#        print('starting')
-#        for x in getChatID():
-#            chatID = x
-#            bot(chatID)        
-#    else:
-#        pass    
-#    time.sleep(3600)
-
-Angebote.searchCategory()
-articles = Angebote.getArticles()
-print(articles)
+while True:
+    today = datetime.date.today()
+    dayNumber = datetime.date.weekday(today)
+    now = datetime.datetime.now()
+    hour = now.strftime('%H')
+    if days[dayNumber] == 'Montag' and hour == '10':
+        print('starting')
+        for x in getChatID():
+            chatID = x
+            bot(chatID)        
+    else:
+        pass    
+    time.sleep(3600)
